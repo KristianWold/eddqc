@@ -5,7 +5,7 @@ Code, data and analysis scripts for the paper: [Experimental Detection of Dissip
 
 ## Overview
 
-This repository contains the source code, data, and analysis scripts for the paper "Spectra of noisy parameterized quantum circuits: Single-Ring universality", which explores the retrival and analysis of quantum processes implemented as quantum circuits on real quantum hardware.
+This repository contains the source code, data, and analysis scripts for the paper "Experimental Detection of Dissipative Quantum Chaos", which explores the retrival and analysis of quantum processes implemented as quantum circuits on real quantum hardware.
 
 ## Repository Structure
 ```
