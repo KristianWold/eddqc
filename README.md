@@ -1,7 +1,5 @@
 # Experimental Detection of Dissipative Quantum Chaos
 
-## Overview
-
 This repository contains the source code, data, and analysis scripts for the paper [Experimental Detection of Dissipative Quantum Chaos
 ](https://arxiv.org/pdf/2506.04325), which explores detection of quantum chaos (and lack thereof) in noisy quantum ciruits on real quantum hardware. 
 
