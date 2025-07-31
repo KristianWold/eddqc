@@ -11,6 +11,10 @@ Data and scripts for analysis related to Figure 2.
 
 Data and scripts for analysis related to Figure 3.
 
+## plotting
+
+Scripts for plotting Figure 1, 2 and 3.
+
 ## synthetic_benchmark 
 
 Data and scripts for analysis related to Figure S6.
@@ -18,3 +22,4 @@ Data and scripts for analysis related to Figure S6.
 ## theoretic_AI_and_FF
 
 Data and scripts for analysis related to Figure 1.
+
