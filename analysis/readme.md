@@ -25,10 +25,6 @@ Data and scripts for analysis related to Figure 2.
 
 Data and scripts for analysis related to Figure 3.
 
-## models
-
-Quantum map models retrieved from experimental quantum circuit data.
-
 ## plotting
 
 Scripts for plotting Figure 1, 2 and 3.
