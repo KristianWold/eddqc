@@ -1,27 +1,20 @@
-# Read Me
+# Analysis
 
-This folder contains the folders for the Zhejiang experiments. The folderrs are organized as follows:
+This folder contains all notebooks and data required to regenerate the results and figures in the paper.
+To reproduce Figure 1, 2 and 3, the major figures of this work, run [plot.ipynb](plotting/plot.ipynb) located in the folder [plotting](plotting/).
 
-## experiments
+## integrable_nonintegrable
 
-Collection of zips, codes and raw experimental results. 
+Data and scripts for analysis related to Figure 2.
 
-## integrable
+## integrable_transition
 
-This folder contains notebooks for retrieving the quantum maps from the free-fermion and generic circuit Zhejiang experiments. From the retrieved maps, the spectra and CSR are computed and contrasted with numerical and theoretical predictions.
+Data and scripts for analysis related to Figure 3.
 
-## pqc
+## synthetic_benchmark 
 
-This folder contains notebooks for retrieving the quantum maps from the parameteric quantum circuit Zhejiang experiments. The retrieved maps are used to compute the spectra. The ring-like spectra of the PQC are investigated, and Diluted Unitary models are fitted to the data to produce estimates of effective decoherence strength and rank.
+Data and scripts for analysis related to Figure S6.
 
-## pqc_twirl
+## theoretic_AI_and_FF
 
-Same as `pqc`, but with data generated with Pauli twirling.
-
-## retrieve_map
-
-Preliminary attempt at retrieving map from first data
-
-## spam
-
-Analysis of the retrieved SPAM models
+Data and scripts for analysis related to Figure 1.
