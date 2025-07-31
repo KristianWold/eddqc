@@ -10,15 +10,16 @@ This repository contains the source code, data, and analysis scripts for the pap
 ## Repository Structure
 ```
 ├── analysis/                                       # subfolders containing notebooks, data, and resulting figures
-│   ├── atypical_quantum_maps/  
-│   │   ├── data/                                   # raw experimental and synthetic data
-│   │   ├── figures/                                # figures resulting from notebooks
-│   │   ├── Atypical_Quantum_Maps_Analysis.ipynb    # notebooks for analysis and visualisation
+│   ├── experiments/
+│   ├── fitting_maps/           
+│   │   ├── data/                                   # raw experimental data from Zhejiang Platform
+│   │   ├── models/                                 # quantum map models retrieved form data
+│   │   ├── Fitting_Map_Integrable_L=5.ipynb        # notebooks for retriving quantum map models
 │   │   └── ...
-│   ├── concatenation/
+│   ├── fitting_maps_bootstrap/                     # quantum maps retrieved from bootstrapped data
 │   └── ...
-├── src_tf/                                         # source code                 
-│   ├── README.md
+├── src/                                            # source code                 
+│   ├── analysis.py
 │   ├── experimental.py                   
 │   └── ...
 ├── LICENSE.md
