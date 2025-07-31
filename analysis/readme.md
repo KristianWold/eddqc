@@ -3,9 +3,19 @@
 This folder contains all notebooks and data required to regenerate the results and figures in the paper.
 To reproduce Figure 1, 2 and 3, the major figures of this work, run [plot.ipynb](plotting/plot.ipynb) located in the folder [plotting](plotting/).
 
-## data
+## experiments
 
-Raw experimental data stemming from implementation of various quantum ciruits on the Zhejiang platform. Data relevant for this work is under [data/chaos_exp_reorder/5q/](data/chaos_exp_reorder/5q/).
+scripts and standalone source code for setting up integrable and non-integrable quantum circuits for various depths.
+
+## fitting_maps
+
+Retrieving quantum map models on the data produced by running the script in [experiments](experiments/) on the Zhejiang platform.
+Raw experimental data is found in [fitting_maps/data/chaos_exp_reorder/5q/](fitting_maps/data/chaos_exp_reorder/5q/). 
+Fitted models are found in [fitting_maps/models/](fitting_maps/models/).
+
+## fitting_maps_bootstrap
+
+Retrieving quantum map models on data resampled from [fitting_maps/data] using bootstrapping. Resulting models are in [fitting_maps_bootstrap/models/](fitting_maps_bootstrap/models/).
 
 ## integrable_nonintegrable
 
