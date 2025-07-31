@@ -5,7 +5,7 @@ Code, data and analysis scripts for the paper: [Experimental Detection of Dissip
 
 ## Overview
 
-This repository contains the source code, data, and analysis scripts for the paper "Experimental Detection of Dissipative Quantum Chaos", which explores the retrival and analysis of quantum processes implemented as quantum circuits on real quantum hardware.
+This repository contains the source code, data, and analysis scripts for the paper "Experimental Detection of Dissipative Quantum Chaos", which explores detection of quantum chaos (and lack thereof) in noisy quantum ciruits on real quantum hardware.
 
 ## Repository Structure
 ```
