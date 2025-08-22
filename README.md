@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="fig1.png" alt="Project Logo" width="750"/>
+  <img src="fig1.png" alt="Project Logo" width="900"/>
 </div>
 
 # Experimental Detection of Dissipative Quantum Chaos
