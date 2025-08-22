@@ -1,3 +1,9 @@
+<div align="center">
+  <img src="analysis/plotting/figures/fig1.pdf" alt="Project Logo" width="250"/>
+</div>
+
+<div align="center">
+
 # Experimental Detection of Dissipative Quantum Chaos
 
 This repository contains the source code, data, and analysis scripts for the paper [Experimental Detection of Dissipative Quantum Chaos
