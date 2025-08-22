@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="analysis/plotting/figures/fig1.pdf" alt="Project Logo" width="250"/>
+  <img src="fig1.png" alt="Project Logo" width="250"/>
 </div>
 
 <div align="center">
