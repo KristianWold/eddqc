@@ -47,7 +47,6 @@ def hist_ensamble(data_list, bins=15, density=True, error=False):
 
 
 def scatterplot_stats(radial, angular):
-
     if isinstance(radial, list):
         radial = np.concatenate(radial)
         angular = np.concatenate(angular)

@@ -434,3 +434,39 @@ def spectrum_to_angular(spectrum, concat=False):
         spectrum = spectrum.get_spectrum(is_complex=True, keep_unity=False)
     angular = np.angle(spectrum)
     return angular
+
+
+# ---------------------------------#
+# Sector Symmetries
+# ---------------------------------#
+
+
+def Z_i(i, n):
+    I = np.eye(2, dtype=np.complex128)
+    Z = np.array([[1, 0], [0, -1]], dtype=np.complex128)
+
+    return kron(*[I if j != i else Z for j in range(n)])
+
+
+def Q_n(n_sys, n_env):
+    return sum([Z_i(i, n_sys) for i in range(n_sys)])
+
+
+def Q_diff(n_sys, n_env):
+    I_d = np.eye(2**n_sys, dtype=np.complex128)
+    Q = Q_n(n_sys, n_env)
+    Q_d = 0.5 * (kron(Q, I_d) - kron(I_d, Q))
+    return Q_d
+
+
+def calculate_expected_parity(vec_L, vec_R, n_sys=4, n_env=1, SO=None):
+    Q_d = Q_diff(n_sys, n_env)
+
+    diff = np.sum(SO@Q_d - Q_d@SO)
+
+    parity_list = []
+
+    parity = vec_L.conj().T @ Q_d @ vec_R
+    parity_list = np.diag(parity)
+        
+    return parity_list, diff
