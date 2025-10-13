@@ -7,7 +7,7 @@ if __name__ == "__main__":
     
     n = 4        # number of qubits that are measured
     n_anc = 0    # number of ancilla qubits, that are trace out/discarded/not measured
-    L = 30       # layers of circuit
+    L = 20       # layers of circuit
     reps = 10    # repeated experiments/ different target circuits
 
     circuit_list = []
