@@ -1,13 +1,13 @@
 import numpy as np
 import numpy as np
 import qiskit as qk
-from src import *
+from src import integrable_circuit_weak_coupling, prepare_SPAM_strings, generate_circuit_sandwich
 
 if __name__ == "__main__":
     
     n = 4        # number of qubits that are measured
-    n_anc = 0    # number of ancilla qubits, that are trace out/discarded/not measured
-    L = 50       # layers of circuit
+    n_anc = 1    # number of ancilla qubits, that are trace out/discarded/not measured
+    L = 50      # layers of circuit
     reps = 10    # repeated experiments/ different target circuits
 
     circuit_list = []
@@ -15,7 +15,7 @@ if __name__ == "__main__":
     # same experiment repeated 10 times with different seeds
     for i in range(reps):
         np.random.seed(42 + i) # different seeds for each realization
-        circuit_target = integrable_circuit(n + n_anc, L)
+        circuit_target = integrable_circuit_weak_coupling(n + n_anc, L)
         
         circuit_SPAM_list = prepare_SPAM_strings(n, n_anc)
         
