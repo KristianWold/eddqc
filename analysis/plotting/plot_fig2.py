@@ -119,7 +119,7 @@ def plot_all(save=False):
     # plot 2d
     xs = ys = [-1, 0, 1]
     vmin = 0
-    vmax = 0.6
+    vmax = 2*0.6
     cmap = "RdBu_r"
     for i, (type, data) in enumerate(result.items()):
         ax = ag.axes[i]
