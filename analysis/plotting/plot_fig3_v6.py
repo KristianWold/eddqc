@@ -110,9 +110,9 @@ def collect_data():
             name = path / f"{key}_std_L={L}.txt"
             dist_result[f"{key}_L={L}_exp_std"] = read_data(name)
 
-        name = path / f"{key}_FF_theory.txt"
+        name = path / f"{key}_FF_theory_noSmooth.txt"
         dist_result[f"{key}_FF_theory"] = read_data(name)
-        name = path / f"{key}_AI_theory.txt"
+        name = path / f"{key}_AI_theory_noSmooth.txt"
         dist_result[f"{key}_AI_theory"] = read_data(name)
     return csr_result, scatter_result, scatter_std_result, dist_result
 
@@ -490,10 +490,10 @@ def plot_all(save=False):
         # ax.set_title(f"$T$ = {L}", fontsize=FONTSIZE)
 
         x, y = dist_result[f"radial_FF_theory"].T
-        plot1d(x, y, ax=ax, lw=LW - 0.5, label="FF${}_{4,1}$", color="C0")
+        plot1d(x, y, marker=".", ms=MS - 2, ax=ax, lw=LW - 0.5, label="FF${}_{4,1}$", color="C0")
 
         x, y = dist_result[f"radial_AI_theory"].T
-        plot1d(x, y, ax=ax, lw=LW - 0.5, label="AI${}_{4,1}$", color="red")
+        plot1d(x, y, marker=".", ms=MS - 2, ax=ax, lw=LW - 0.5, label="AI${}_{4,1}$", color="red")
         format_legend(ax, size=5)
         ax.legend(
             labelspacing=0.1,
@@ -556,10 +556,10 @@ def plot_all(save=False):
         # )
 
         x, y = dist_result[f"angular_FF_theory"].T
-        plot1d(x, y, ax=ax, lw=LW - 0.5, color="C0")
+        plot1d(x, y, marker=".", ms=MS - 2, ax=ax, lw=LW - 0.5, color="C0")
 
         x, y = dist_result[f"angular_AI_theory"].T
-        plot1d(x, y, ax=ax, lw=LW - 0.5, color="red")
+        plot1d(x, y, marker=".", ms=MS - 2, ax=ax, lw=LW - 0.5, color="red")
 
     ag_dist.set_xlabel(
         r"$\theta$", fontsize=FONTSIZE+1, axes=[2, 3], sharex=1, labelpad=0.5
