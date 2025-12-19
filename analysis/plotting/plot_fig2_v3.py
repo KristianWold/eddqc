@@ -120,12 +120,13 @@ def plot_all(save=False):
     xs = ys = [-1, 0, 1]
     vmin = 0
     vmax = 0.6
+    a = 2.5
     cmap = "RdBu_r"
     for i, (type, data) in enumerate(result.items()):
         ax = ag.axes[i]
         if type == "Integrable":
             title = "Integrable"
-            vmax_ = 2*vmax
+            vmax_ = a
         else:
             title = "Chaotic"
             vmax_ = vmax
@@ -145,7 +146,7 @@ def plot_all(save=False):
         ax.set_title(title, fontsize=FONTSIZE - 1, pad=3)
 
     # --- Colorbar for Integrable ---
-    norm_int = mcolors.Normalize(vmin=vmin, vmax=2*vmax)
+    norm_int = mcolors.Normalize(vmin=vmin, vmax=a)
     cax_int = fig.add_axes([0.89, 0.63, 0.015, 0.30])   # adjust to your layout
     cbar_int = fig.colorbar(
         mpl.cm.ScalarMappable(norm=norm_int, cmap=cmap),
@@ -153,7 +154,7 @@ def plot_all(save=False):
         orientation="vertical",
         label="probability",
     )
-    cbar_int.set_ticks([vmin, 2*vmax])
+    cbar_int.set_ticks([vmin, a])
 
     # --- Colorbar for Chaotic ---
     norm_ch = mcolors.Normalize(vmin=vmin, vmax=vmax)
