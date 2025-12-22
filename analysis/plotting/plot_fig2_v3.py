@@ -192,7 +192,10 @@ def plot_all(save=False):
 
     if save:
         fig_name = "figures/fig2.pdf"
-        fig.savefig(fig_name, pad_inches=0, transparent=True)
+        fig.savefig(fig_name,
+                    bbox_inches="tight",   
+                    pad_inches=0.02, 
+                    transparent=True)
         print("Saved ", fig_name)
 
 

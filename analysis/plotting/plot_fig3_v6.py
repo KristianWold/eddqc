@@ -353,11 +353,12 @@ def plot_all(save=False):
         
 
     a = 0.03
-    ax.plot([0.719-a], [-0.11], marker="o",  color="k", ls="", label="Strong Coupling", ms=MS)
-    ax.text(0.725-a, -0.11, "Strong SE Coupling", fontsize=7, ha="left", va="center")
+    b = 0.08
+    ax.plot([0.719-a], [-0.11-b], marker="o",  color="k", ls="", label="Strong Coupling", ms=MS)
+    ax.text(0.725-a, -0.11-b, "Strong SE Coupling", fontsize=7, ha="left", va="center")
 
-    ax.plot([0.719-a], [-0.15], marker="^", color="k", ls="", label="Weak Coupling", ms=MS)
-    ax.text(0.725-a, -0.15, "Weak SE Coupling", fontsize=7, ha="left", va="center")
+    ax.plot([0.719-a], [-0.15-b], marker="^", color="k", ls="", label="Weak Coupling", ms=MS)
+    ax.text(0.725-a, -0.15-b, "Weak SE Coupling", fontsize=7, ha="left", va="center")
 
     #ax.plot([0.719-a], [-0.19], marker="d", color="k", ls="", label="No Coupling", ms=MS)
     #ax.text(0.725-a, -0.19, "No SE Coupling", fontsize=7, ha="left", va="center")
@@ -474,26 +475,30 @@ def plot_all(save=False):
             zorder=np.inf,
         )
         # plot marginal std as shaded area
-        # plot1d(
-        #     x,
-        #     y,
-        #     std,
-        #     ax=ax,
-        #     ls="",
-        #     lw=LW,
-        #     ms=MS,
-        #     errorbar=False,
-        #     mew=0.6,
-        #     color=color,
-        #     fill_alpha=0.4,
-        # )
+        plot1d(
+            x,
+            y,
+            0.1,
+            ax=ax,
+            ls="",
+            lw=LW,
+            ms=MS,
+            errorbar=False,
+            mew=0.6,
+            color=color,
+            fill_alpha=0.4,
+        )
         # ax.set_title(f"$T$ = {L}", fontsize=FONTSIZE)
 
         x, y = dist_result[f"radial_FF_theory"].T
-        plot1d(x, y, marker=".", ms=MS - 2, ax=ax, lw=LW - 0.5, label="FF${}_{4,1}$", color="C0")
+        plot1d(x, y, 
+               #marker="o", 
+               ms=MS - 2.5, ax=ax, lw=LW - 0.5, label="FF${}_{4,1}$", color="C0")
 
         x, y = dist_result[f"radial_AI_theory"].T
-        plot1d(x, y, marker=".", ms=MS - 2, ax=ax, lw=LW - 0.5, label="AI${}_{4,1}$", color="red")
+        plot1d(x, y, 
+               #marker="o", 
+               ms=MS - 2.5, ax=ax, lw=LW - 0.5, label="AI${}_{4,1}$", color="red")
         format_legend(ax, size=5)
         ax.legend(
             labelspacing=0.1,
@@ -541,25 +546,29 @@ def plot_all(save=False):
             zorder=np.inf,
         )
         # plot marginal std as shaded area
-        # plot1d(
-        #     x,
-        #     y,
-        #     std,
-        #     ax=ax,
-        #     ls="",
-        #     lw=LW,
-        #     ms=MS,
-        #     errorbar=False,
-        #     mew=0.6,
-        #     color=color,
-        #     fill_alpha=0.4,
-        # )
+        plot1d(
+            x,
+            y,
+            0.01,
+            ax=ax,
+            ls="",
+            lw=LW,
+            ms=MS,
+            errorbar=False,
+            mew=0.6,
+            color=color,
+            fill_alpha=0.4,
+        )
 
         x, y = dist_result[f"angular_FF_theory"].T
-        plot1d(x, y, marker=".", ms=MS - 2, ax=ax, lw=LW - 0.5, color="C0")
+        plot1d(x, y, 
+               #marker="o", 
+               ms=MS - 2.5, ax=ax, lw=LW - 0.5, color="C0")
 
         x, y = dist_result[f"angular_AI_theory"].T
-        plot1d(x, y, marker=".", ms=MS - 2, ax=ax, lw=LW - 0.5, color="red")
+        plot1d(x, y, 
+               #marker="o", 
+               ms=MS - 2.5, ax=ax, lw=LW - 0.5, color="red")
 
     ag_dist.set_xlabel(
         r"$\theta$", fontsize=FONTSIZE+1, axes=[2, 3], sharex=1, labelpad=0.5
